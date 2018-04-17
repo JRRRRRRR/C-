@@ -1,0 +1,43 @@
+#include<iostream>
+#include<cmath>
+using namespace std;
+
+int main(){
+    int number1, number2;
+    char chioce;
+    cout << "S for sum" << endl;
+    cout << "D for difference" << endl;
+    cout << "P for product" << endl;
+    cout << "Q for quotient" << endl;
+    cout << "R for reminder" << endl;
+    cout << "enter your choice: " << endl;
+    cin >> chioce;
+    cout << "enter two numbers: " << endl;
+    cin >> number1 >> number2;
+    switch(chioce)
+    {
+        case 'S':
+        case 's':
+            cout << "sum is: " << number1 + number2 << endl;
+            break;
+        case 'D':
+        case 'd':
+            cout << "difference is: " << number1 - number2 << endl;
+            break;
+        case 'P':
+        case 'p':
+            cout << "product is: " << number1 * number2 << endl;
+            break;
+        case 'Q':
+        case 'q':
+            cout << "quotient is: " << number1 / number2 << endl;
+            break;
+        case 'R':
+        case 'r':
+            cout << "reminder is: " << number1 % number2 << endl;
+            break;
+        default:
+            cout << "worng chioce" << endl;
+
+    return 0;
+    }}
