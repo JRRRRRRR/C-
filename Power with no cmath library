@@ -1,0 +1,12 @@
+#include<iostream>
+using namespace std;
+int main() {
+    int x ,y, ans = 1;
+    cout << "enter the base and power: " << endl;
+    cin >> x >> y;
+    for(int i = 1; i <= y; i++){
+        ans = x * ans;
+        }
+    cout << "the value will be: " << ans << endl;
+    return 0;
+}
