@@ -1,0 +1,53 @@
+#include <iostream>
+using namespace std;
+//function prototype
+int factorial(int);
+void prime(int);
+int main(){
+    int number;
+    cin >> number;
+    //int ans = factorial(x);
+    cout << factorial(number) << endl;
+    prime(number);
+    
+    return 0;
+}
+
+
+int factorial(int number){
+    int factorial = 1;
+    for(int i=1;i<=number;i++){
+        factorial = i * factorial;
+    }
+    return factorial;
+}
+
+
+void prime(int number)
+    {
+        int num;
+        cout<<"enter a number\n";
+        cin>>num;
+        int flag=0;
+        for(int i=2;i<num/2;i++)
+        {
+            if(num%i==0)
+            {
+                cout<<"its not a prime number\n";
+                flag=1;
+                break;
+            }
+            //cout<<num%i<<endl;
+        }
+        if(flag==0)
+        {
+            cout<<"its a prime number\n";
+        }
+        
+        /*int x=2;
+         while(x<num)
+         {
+         cout<<x;
+         x++;
+         }*/
+    }
