@@ -1,0 +1,82 @@
+/*Write a program to get 50 elements between 25 and 105 into an array. 
+Find sum of all the elements of the above array.
+Find  average, minimum and maximum of all the elements of an array.
+Print all the elements which are multiples of 5 and its count.
+Print all the numbers which are prime from above array.
+Write appropriate comments.
+Print all the prime numbers between 1 and 500.*/
+
+#include <iostream>
+using namespace std;
+//function prototype
+void primeNumber(int);
+int main(){
+//declare the data type for each variable
+    int number[50], Sum=0, Minimum, Maximum,Count=0;
+//use for loop to print each element in the array
+    for(int i=0; i <= 49; i++){
+//use rand() to get some rand number
+        number[i] = rand()%81+25;
+        cout << number[i] << endl;
+//calculate the sum
+        Sum = Sum + number[i];
+        }
+//set the initial Minimum and Maximum valus
+    Minimum=number[0];
+    Maximum=number[0];
+//print a statement to distinguish
+    cout << "Elements that are multiples of 5: " << endl;
+//use for loop to compare each element
+    for(int i=0; i <= 49; i++){
+//to get minimum
+    if(Minimum >= number[i]){
+        Minimum=number[i];
+        }
+//to get maximum
+    if(Maximum <= number[i]){
+        Maximum=number[i];
+    }
+//to get the count and numbers
+    if(number[i]%5==0){
+            cout << number[i] << endl;
+            Count=Count+1;
+        }
+    }
+//print the sum
+    cout << "Sum: " << Sum << endl;
+//print the average
+    cout << "Average: " << Sum/50 << endl;
+//print the minimum
+    cout << "Minimum: " << Minimum << endl;
+//print the Maximum
+    cout << "Maximum: " << Maximum << endl;
+//print the count
+    cout << "Count: " << Count << endl;
+//prime number in the array
+    cout << "prime number in the array: " << endl;
+    for(int i=0; i <= 49; i++){
+//call void function
+        primeNumber(number[i]);
+    }
+//prime number between 1 to 500
+    cout << "prime number between 1 to 500: " << endl;
+    for(int i=1; i <= 500; i++){
+//call void function
+        primeNumber(i);
+    }
+    return 0;
+}
+//function definition
+void primeNumber(int number){
+    int flag=0;
+    for(int i = 2; i < number; i++){
+    if(number % i == 0){
+        flag=1;
+        break;
+        }
+        }
+    if(flag==0){
+        cout << number << " is a prime number" << endl;
+        }
+}
+
